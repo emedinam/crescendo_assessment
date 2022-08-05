@@ -29,7 +29,7 @@ public class CrescendoController {
 
 
     @GetMapping("/{biz_id}/reviews")
-    public ResponseEntity<String> getReviewsByBizId(@PathVariable("biz_id") String bizId ) throws Exception{
+    public ResponseEntity<String> getReviewsByBBusinessId(@PathVariable("biz_id") String bizId ) throws Exception{
 
         //Favorite Restaurant Id : MGd6HFEq1ALD58XWNviSXw
         var reviews = yelpReviewService.getReviewByBussinessId(bizId);
@@ -38,8 +38,8 @@ public class CrescendoController {
     }
 
 
-    @GetMapping("/first_bizz")
-    public ResponseEntity<String> getBizzId() throws Exception{
+    @GetMapping("/first_business")
+    public ResponseEntity<String> getBusinessId() throws Exception{
 
         //Get the Id
         String bizId = yelpReviewService.findFirstBusinessIdByQuery();

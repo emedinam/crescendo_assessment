@@ -19,7 +19,7 @@ public class CrescendoControllerTest {
 
         String bizId = "sZtL9wpVfP7K5sERd1gPbA";
 
-        ResponseEntity<String> entity = controller.getReviewsByBizId(bizId);
+        ResponseEntity<String> entity = controller.getReviewsByBBusinessId(bizId);
 
         assertNotNull(entity);
         assertEquals(HttpStatus.OK, entity.getStatusCode());
